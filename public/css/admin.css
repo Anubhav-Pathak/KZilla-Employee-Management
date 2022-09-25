@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #151218;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+li{
+    margin: 1rem 2rem;
+    border-bottom: 2px solid #151218;
+}
+li a{
+    padding-bottom: 0.5rem;
+}
+li:hover a{
+    border-bottom: 2px solid #f46953;
+}
+span{
+    color: white;
+    font-size: 24px;
+    margin: 0 1rem;
+}
+li a{
+    text-decoration: none;
+    color: #f46953;
+}
+section{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+}
+article{
+    margin: 0.5rem;
+    padding: 1rem;
+    background-color: #151218;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    border-radius: 15px;
+    -webkit-box-shadow: 1px 9px 23px 7px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 9px 23px 7px rgba(0,0,0,0.75);
+    box-shadow: 1px 9px 23px 7px rgba(0,0,0,0.75);
+}
+article h3{
+    margin: 1rem 0;
+    padding: 0;
+}
+article ul{
+    margin: 0;
+    padding: 0;
+}
+article div{
+    display: flex;
+    margin-top: 1rem;
+}
+article button{
+    margin-right: 2rem;
+    padding: 0.5rem 1rem;
+    border: 2px solid #f46953;
+    background-color: #f46953;
+    border-radius: 20px;
+    width: 100px;
+}
+article button a{
+    text-decoration: none;
+    color: #151218;
+}
+input[type="submit"]{
+    padding: 0.5rem 1rem;
+    border: 2px solid #f46953;
+    color: #f46953;
+    background-color: transparent;
+    border-radius: 20px;
+    width: 100px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #f46953;
+    color: #151218;
+    font-size: 20px;
+}
+form.Employee{
+    display: grid;
+    min-width: 270px;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+}
+.form-control label{
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 18px;
+}
+.form-control input{
+    padding: 0.25rem 0;
+    font-size: 18px;
+    border: none;
+    border-bottom: 2px dashed #f46953;
+    outline: none;
+    background-color: transparent;
+    color: #f46953;
+}
+input.Submit{
+    margin-top: 2rem;
+    background-color: #f46953;
+    color: #151218;
+    font-size: 18px;
+    width: 100%;
+}

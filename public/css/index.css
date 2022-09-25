@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #f46953;
+}
+nav ul{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+li{
+    margin: 1rem 2rem;
+    border-bottom: 2px solid #f46953;
+}
+li a{
+    padding-bottom: 0.5rem;
+}
+li:hover a{
+    border-bottom: 2px solid #151218 ;
+}
+li a{
+    text-decoration: none;
+    color: #151218;
+}
+.Login{
+    padding: 0.5rem 2rem;
+    background-color: #151218;
+    color: #f46953;
+    border: 2px solid #f46953;
+    border-radius: 20px;
+}
+.Login:hover{
+    background-color: transparent;
+    color: #151218;
+    border: 2px solid #151218;
+}
+.first{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #151218;
+}
+.first h1{
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+    color: white;
+}
+.first h3{
+    margin: 2rem 0 0 0;
+    padding: 0;
+    font-size: 28px;
+    color: #f46953;
+}
+.second{
+    background-color: #151218;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.second h1{
+    margin: 2rem 0;
+    padding: 0;
+    font-size: 28px;
+    color: #f46953;
+}
+.second > section{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    color: white;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #f46953;
+    color: #151218;
+    font-size: 20px;
+}
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.form-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0;
+}
+.form-control input{
+    padding: 0.5rem 1rem;
+    font-size: 24px;
+    background-color: transparent;
+    border: 2px solid #f46953;
+    border-radius: 30px;
+    color: #f46953;
+}
+input::placeholder{
+    text-align: center;
+}
+input[type="submit"]{
+    padding: 0.5rem 2rem; 
+    font-size: 24px;
+    color: #151218;
+    background-color: #f46953;
+    border: 2px solid #151218;
+    border-radius: 30px;
+}
+input:focus{
+    border: 2px solid #f46953;
+    background-color: transparent
+}
+input.Wrong{
+    border: 2px solid red;
+}

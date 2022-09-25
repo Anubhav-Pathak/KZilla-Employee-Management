@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <title><%= docTitle %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="#Team">Our Team</a></li>
+                <li><a href="/login/?valid=true" class="Login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <h1> Welcome to SRM KZilla </h1>
+            <h3> The campus club you love </h3>
+        </section>
+        <section class="second" id="Team">
+            <h1> Our Team </h1>
+            <% if(employees.length > 0) { %>
+                <section>
+                    <% for(let employee of employees) { %>
+                        <article>
+                            <img src="https://www.seekpng.com/png/full/138-1388103_user-login-icon-login.png" width="200px" alt="User">
+                            <h3> <%= employee.name %> </h3>
+                        </article>
+                    <% } %>
+                </section>
+            <% } else { %>
+                <h1> No Team Members :( </h1>
+            <% } %>
+        </section>
+    </main>
+    <footer>
+        <p> Created by Anubhav Pathak </p>
+    </footer>
+</body>
+</html>

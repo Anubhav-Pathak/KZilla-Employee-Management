@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title><%= docTitle %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span> Admin </span>
+            <ul>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="/admin/add">Add Employee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="first">
+            <% if(!editing) { %>
+                <form action="/admin/add" method="POST" class="Employee">
+                    <div class="form-control">
+                        <label for="name"> Name: </label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="email"> Email: </label>
+                        <input type="text" id="email" name="email" placeholder="xyz@srmist.edu.in" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="age"> Age: </label>
+                        <input type="number" id="age" name="age" placeholder="XX">
+                    </div>
+                    <div class="form-control">
+                        <label> Gender: </label>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male"> Male </label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female"> Female </label>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="phone"> Phone no: </label>
+                        <input type="number" id="phone" name="phone" placeholder="XXX XXX XXXX">
+                    </div>
+                    <input type="submit" value="Add" class="Submit">
+                </form>
+            <% } else { %>
+                <form action="/admin/edit" method="POST" class="Employee">
+                    <div class="form-control">
+                        <label for="name"> Name: </label>
+                        <input type="text" id="name" name="name" value="<%= employee.name %>" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="email"> Email: </label>
+                        <input type="text" id="email" name="email" value="<%= employee.email %>" required>
+                    </div>
+                    <div class="form-control">
+                        <label for="age"> Age: </label>
+                        <input type="number" id="age" name="age" value="<%= employee.age %>">
+                    </div>
+                    <div class="form-control">
+                        <label> Gender: </label>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gender" value="male" checked>
+                            <label for="male"> Male </label>
+                            <input type="radio" id="female" name="gender" value="female">
+                            <label for="female"> Female </label>
+                        </div>
+                    </div>
+                    <div class="form-control">
+                        <label for="phone"> Phone no: </label>
+                        <input type="number" id="phone" name="phone" value="<%= employee.phone %>">
+                    </div>
+                    <input type="hidden" name="empId" value="<%= employee._id %>">
+                    <input type="submit" value="Update" class="Submit">
+                </form>
+            <% } %>
+        </section>
+    </main>
+    <footer>
+        <p> Created by Anubhav Pathak </p>
+    </footer>
+</body>
+</html>

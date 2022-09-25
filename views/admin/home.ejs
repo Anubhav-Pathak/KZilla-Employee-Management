@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/admin.css">
+    <title><%= docTitle %></title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span> Admin </span>
+            <ul>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="/admin/add">Add Employee</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <% if(employees.length > 0) { %>
+                <% for(let employee of employees) { %>
+                    <article>
+                        <img src="https://www.seekpng.com/png/full/138-1388103_user-login-icon-login.png" width="200px" alt="User">
+                        <h3> <%= employee.name %> </h3>
+                        <ul>
+                            <li> <%= employee.email %> </li>
+                            <li> <%= employee.age %> </li>
+                            <li> <%= employee.gender %> </li>
+                            <li> <%= employee.phone %> </li>
+                        </ul>
+                        <div>
+                            <button><a href="/admin/edit/<%= employee._id %>"> Edit </a></button>
+                            <form action="/admin/delete" method="post">
+                                <input type="hidden" name="empId" value="<%= employee._id %>">
+                                <input type="submit" value="Delete">
+                            </form>
+                        </div>
+                    </article>
+                <% } %>
+            <% } else { %>
+                <h1> No Team Members :( </h1>
+            <% } %>
+        </section>
+    </main>
+    <footer>
+        <p> Created by Anubhav Pathak </p>
+    </footer>
+</body>
+</html>
