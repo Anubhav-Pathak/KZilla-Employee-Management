@@ -27,12 +27,12 @@ app.use((request,respond,next)=>{
 });
 
 // connection
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 mongoose.connect("mongodb+srv://m001-student:oyCvs3f25KUffLv4@sandbox.f8vu2.mongodb.net/employee_management?retryWrites=true&w=majority")
 .then(result => {
     console.log("Database Connected !");
-    app.listen(port);
+    app.listen(process.env.PORT || port);
 })
 .catch(error => {
     console.log(error);
